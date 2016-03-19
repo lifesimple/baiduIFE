@@ -1,4 +1,4 @@
-### ç2016 Spring baiduIFE code repository
+### 2016 Spring baiduIFE code repository
 members
 - jingxiao
 - majun
