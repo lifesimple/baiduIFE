@@ -35,7 +35,7 @@
  * 返回一个数组，格式见函数中示例
  */
 function getData() {
-  var cityLi = document.getElementsByTagName("li");
+  var cityLi = document.getElementById("source").getElementsByTagName("li");
   var data = [],temp = [];
   for(var i = 0;i < cityLi.length;i++){
     var dataText = cityLi[i].innerText;
@@ -79,11 +79,14 @@ function sortAqiData(data) {
  * 格式见ul中的注释的部分
  */
 function render(data) {
+    var resort = document.getElementById("resort");
+    resort.innerHTML = "";
     for(var i = 0;i < data.length;i++){
         var li  = document.createElement("li");
       //  var msg = 
-      li.appendChild(document.createTextNode("第"+(i+1)+"名："+data[i][0]+"空气质量："+data[i][1]));
-        document.getElementById("resort").appendChild(li);
+      
+      li.innerHTML = "第"+(i+1)+"名："+data[i][0]+"空气质量：<b>"+data[i][1]+"</b>";
+      document.getElementById("resort").appendChild(li);
     }
 }
 
